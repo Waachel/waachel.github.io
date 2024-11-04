@@ -145,7 +145,7 @@
 
 #intro h2 span.teal {
     color: var(--pure-white) !important;
-    background-color: var(--dark-purple) !important;
+    background-color: var(--light-purple) !important;
     padding: 0 5px;
 }
 
@@ -253,8 +253,21 @@ h5[style*="color:#004d40"] {
 }
 
 /* Contact section styling */
-#contact h3 {
+/* Contact section styling - removing background color */
+#contact.section.scrollspy.full-height {
+    background-color: transparent !important;
+}
+
+/* Remove any gradient or overlay if present */
+#contact .overlay {
+    background: none !important;
+}
+
+/* Ensure other contact section styles remain consistent */
+#contact h3.page-title {
     background-color: var(--dark-purple) !important;
+    color: var(--pure-white) !important;
+    margin-bottom: 2rem;
 }
 
 #contact p a {
@@ -275,12 +288,6 @@ h5[style*="color:#004d40"] {
 
 #contact p a:hover {
     color: var(--main-purple) !important;
-}
-
-#contact .page-title.white-text.teal {
-    background-color: var(--dark-purple) !important;
-    color: var(--pure-white) !important;
-    margin-bottom: 2rem;
 }
 
 /* Override any inline teal styles */
