@@ -48,107 +48,153 @@
   <!-- Google Site Verification for indexing -->
   <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
 
-       <style>
-        :root {
-            --main-purple: #685369;
-            --light-purple: #8b708c;
-            --dark-purple: #463948;
-            --accent-purple: #a587a6;
-        }
+  <style>
+/* Root variables for color scheme */
+:root {
+    --main-purple: #685369;
+    --light-purple: #8b708c;
+    --dark-purple: #463948;
+    --accent-purple: #a587a6;
+}
 
-        /* Replace all teal colors with purple */
-        .teal {
-            background-color: var(--main-purple) !important;
-        }
+/* Base color overrides */
+.teal {
+    background-color: var(--main-purple) !important;
+}
 
-        .teal-text {
-            color: var(--main-purple) !important;
-        }
+.teal-text {
+    color: var(--main-purple) !important;
+}
 
-        /* Update navigation and links */
-        .waves-effect.waves-dark.teal-text {
-            color: var(--main-purple) !important;
-        }
+/* Navigation and links */
+.waves-effect.waves-dark.teal-text {
+    color: var(--main-purple) !important;
+}
 
-        /* Update buttons and icons */
-        .btn, .btn-large {
-            background-color: var(--main-purple) !important;
-        }
+.waves-effect.waves-darkcolor\:\#685369 .waves-ripple {
+    background-color: var(--main-purple);
+}
 
-        /* Social buttons */
-        .social .icon-btn {
-            background-color: var(--main-purple);
-        }
+/* Buttons and icons */
+.btn, .btn-large {
+    background-color: var(--main-purple) !important;
+}
 
-        /* Update hover effects */
-        .hoverline:hover {
-            border-bottom-color: var(--main-purple) !important;
-        }
+.btn-floating {
+    background-color: var(--main-purple) !important;
+}
 
-        /* Navigation active states */
-        .side-nav li:hover, 
-        .side-nav li.active {
-            background-color: var(--light-purple);
-        }
+.blue-grey {
+    background-color: var(--main-purple) !important;
+}
 
-        /* Card title colors */
-        .card .card-title {
-            color: var(--main-purple) !important;
-        }
+/* Button hover states */
+.btn:hover, .btn-large:hover {
+    background-color: var(--dark-purple) !important;
+}
 
-        /* Section headers */
-        .page-title {
-            background-color: var(--main-purple) !important;
-        }
+/* Social buttons */
+.social .icon-btn {
+    background-color: var(--main-purple);
+}
 
-        /* Update intro section */
-        #intro span.teal {
-            color: var(--main-purple) !important;
-            background-color: transparent !important;
-        }
+.social .icon-btn:hover {
+    background-color: var(--dark-purple);
+}
 
-        /* Contact section buttons */
-        .btn-floating {
-            background-color: var(--main-purple) !important;
-        }
+/* Navigation styles */
+.side-nav li:hover, 
+.side-nav li.active {
+    background-color: var(--light-purple);
+}
 
-        /* Update scrollspy */
-        .table-of-contents a.active {
-            border-left: 2px solid var(--main-purple) !important;
-        }
+/* Card styles */
+.card .card-title {
+    color: var(--main-purple) !important;
+}
 
-        .table-of-contents a:hover {
-            border-left: 1px solid var(--main-purple) !important;
-        }
+.card .card-action a {
+    color: var(--main-purple) !important;
+}
 
-        /* Update typed.js cursor */
-        .typed-cursor {
-            color: var(--main-purple) !important;
-        }
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    color: var(--main-purple);
+}
 
-        /* Button hover states */
-        .btn:hover, .btn-large:hover {
-            background-color: var(--dark-purple) !important;
-        }
+/* Section headers */
+.page-title {
+    background-color: var(--main-purple) !important;
+    color: var(--main-purple) !important;
+}
 
-        /* Custom styles for specific sections */
-        #intro h2 span {
-            color: var(--main-purple);
-        }
+.page-title.white-text.teal {
+    background-color: var(--main-purple) !important;
+}
 
-        .social .icon-btn:hover {
-            background-color: var(--dark-purple);
-        }
+/* Intro section */
+#intro span.teal {
+    color: var(--main-purple) !important;
+    background-color: transparent !important;
+}
 
-        .card .card-action a {
-            color: var(--main-purple) !important;
-        }
+#intro h2 span {
+    color: var(--main-purple);
+}
 
-        /* Update any blue-grey buttons to purple */
-        .blue-grey {
-            background-color: var(--main-purple) !important;
-        }
-    </style>
+/* Profile picture and header */
+.circle {
+    border: 3px solid var(--main-purple) !important;
+}
+
+.brand-logo.grey-blue-text {
+    color: var(--main-purple) !important;
+}
+
+/* Section styling */
+.section.scrollspy.full-height {
+    background-color: var(--main-purple) !important;
+}
+
+/* Overlay effects */
+.overlay {
+    background: linear-gradient(rgba(104, 83, 105, 0.9), rgba(104, 83, 105, 0.9)) !important;
+}
+
+/* Link hover effects */
+.hoverline:hover {
+    border-bottom-color: var(--main-purple) !important;
+}
+
+/* Scrollspy styling */
+.table-of-contents a.active {
+    border-left: 2px solid var(--main-purple) !important;
+}
+
+.table-of-contents a:hover {
+    border-left: 1px solid var(--main-purple) !important;
+}
+
+/* Typed.js cursor */
+.typed-cursor {
+    color: var(--main-purple) !important;
+}
+
+/* Contact section buttons */
+.buttons .readme, .buttons .contactme {
+    background-color: var(--main-purple);
+    color: white;
+}
+
+/* Override any inline teal styles */
+[style*="background-color: teal"] {
+    background-color: var(--main-purple) !important;
+}
+
+/* Additional color overrides */
+.color\:\#685369, .color\:\#685369-text {
+    color: var(--main-purple) !important;
+}
+</style>
 
 </head>
 
