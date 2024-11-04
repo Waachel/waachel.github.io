@@ -48,7 +48,6 @@
   <!-- Google Site Verification for indexing -->
   <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
 
-<style>
 /* Root variables for color scheme */
 :root {
     --main-purple: #685369;
@@ -150,7 +149,7 @@
 }
 
 #intro h5 {
-    color: var(--pure-white) !important;
+    color: var(--dark-purple) !important;
 }
 
 /* Profile picture and header */
@@ -191,9 +190,40 @@
     border-left: 1px solid var(--main-purple) !important;
 }
 
-/* Typed.js cursor */
+/* Update typing animation text color */
+.typing, .typed-cursor {
+    color: var(--dark-purple) !important;
+    font-weight: 500 !important;
+}
+
+/* Ensure the text in the typing container and its parent are also dark purple */
+#intro h5 {
+    color: var(--dark-purple) !important;
+}
+
+.caption h5 {
+    color: var(--dark-purple) !important;
+}
+
+/* Make sure the cursor matches */
 .typed-cursor {
-    color: var(--main-purple) !important;
+    color: var(--dark-purple) !important;
+}
+
+/* Update any existing color overrides */
+h5[style*="color:#fff"] {
+    color: var(--dark-purple) !important;
+}
+
+h5[style*="color:#004d40"] {
+    color: var(--dark-purple) !important;
+}
+
+/* Ensure no other styles override this */
+#intro h5 span, 
+#intro .typing,
+#intro .typed-cursor {
+    color: var(--dark-purple) !important;
 }
 
 /* Read More and Contact buttons */
@@ -221,22 +251,48 @@
     color: var(--pure-white) !important;
 }
 
+/* Contact section styling */
+#contact {
+    background-color: var(--pure-white) !important;
+}
+
+#contact h3 {
+    background-color: var(--dark-purple) !important;
+}
+
+#contact p a {
+    color: var(--dark-purple) !important;
+}
+
+#contact .btn-floating.blue-grey {
+    background-color: var(--dark-purple) !important;
+}
+
+#contact .btn-floating i {
+    color: var(--pure-white) !important;
+}
+
+#contact .btn-floating:hover {
+    background-color: var(--main-purple) !important;
+}
+
+#contact p a:hover {
+    color: var(--main-purple) !important;
+}
+
+#contact .page-title.white-text.teal {
+    background-color: var(--dark-purple) !important;
+    color: var(--pure-white) !important;
+    margin-bottom: 2rem;
+}
+
 /* Override any inline teal styles */
 [style*="background-color: teal"] {
     background-color: var(--main-purple) !important;
 }
 
 /* Additional color overrides */
-.color\:\#685369, .color\:\#685369-text {
-    color: var(--main-purple) !important;
-}
-
-/* White text overrides */
-.white-text.teal {
-    background-color: var(--dark-purple) !important;
-    color: var(--pure-white) !important;
-}
-</style>
+.color\:\#685369
 
 </head>
 
