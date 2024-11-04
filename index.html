@@ -48,7 +48,8 @@
   <!-- Google Site Verification for indexing -->
   <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
 
-/* Root variables for color scheme */
+  <style>
+    /* Root variables for color scheme */
 :root {
     --main-purple: #685369;
     --light-purple: #8b708c;
@@ -292,7 +293,16 @@ h5[style*="color:#004d40"] {
 }
 
 /* Additional color overrides */
-.color\:\#685369
+.color\:\#685369, .color\:\#685369-text {
+    color: var(--main-purple) !important;
+}
+
+/* White text overrides */
+.white-text.teal {
+    background-color: var(--dark-purple) !important;
+    color: var(--pure-white) !important;
+}
+  </style>
 
 </head>
 
