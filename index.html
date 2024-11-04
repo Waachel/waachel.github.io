@@ -48,13 +48,14 @@
   <!-- Google Site Verification for indexing -->
   <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
 
-  <style>
+<style>
 /* Root variables for color scheme */
 :root {
     --main-purple: #685369;
     --light-purple: #8b708c;
     --dark-purple: #463948;
     --accent-purple: #a587a6;
+    --pure-white: #ffffff;
 }
 
 /* Base color overrides */
@@ -95,11 +96,14 @@
 
 /* Social buttons */
 .social .icon-btn {
-    background-color: var(--main-purple);
+    background-color: transparent !important;
+    border: 2px solid var(--pure-white);
+    color: var(--pure-white);
 }
 
 .social .icon-btn:hover {
-    background-color: var(--dark-purple);
+    background-color: var(--pure-white) !important;
+    color: var(--dark-purple);
 }
 
 /* Navigation styles */
@@ -123,22 +127,30 @@
 
 /* Section headers */
 .page-title {
-    background-color: var(--main-purple) !important;
-    color: var(--main-purple) !important;
+    background-color: var(--dark-purple) !important;
+    color: var(--pure-white) !important;
+    padding: 10px;
+    border-radius: 3px;
 }
 
 .page-title.white-text.teal {
-    background-color: var(--main-purple) !important;
+    background-color: var(--dark-purple) !important;
+    color: var(--pure-white) !important;
 }
 
 /* Intro section */
-#intro span.teal {
-    color: var(--main-purple) !important;
-    background-color: transparent !important;
+#intro h2 {
+    color: var(--pure-white);
 }
 
-#intro h2 span {
-    color: var(--main-purple);
+#intro h2 span.teal {
+    color: var(--dark-purple) !important;
+    background-color: var(--pure-white) !important;
+    padding: 0 5px;
+}
+
+#intro h5 {
+    color: var(--pure-white) !important;
 }
 
 /* Profile picture and header */
@@ -153,6 +165,11 @@
 /* Section styling */
 .section.scrollspy.full-height {
     background-color: var(--main-purple) !important;
+}
+
+.section.scrollspy h3 {
+    background-color: var(--dark-purple) !important;
+    color: var(--pure-white) !important;
 }
 
 /* Overlay effects */
@@ -179,10 +196,28 @@
     color: var(--main-purple) !important;
 }
 
-/* Contact section buttons */
-.buttons .readme, .buttons .contactme {
-    background-color: var(--main-purple);
-    color: white;
+/* Read More and Contact buttons */
+.buttons .readme {
+    background-color: var(--pure-white) !important;
+    color: var(--dark-purple) !important;
+    border: 2px solid var(--dark-purple);
+    transition: all 0.3s ease;
+}
+
+.buttons .readme:hover {
+    background-color: var(--dark-purple) !important;
+    color: var(--pure-white) !important;
+}
+
+.buttons .contactme {
+    background-color: var(--dark-purple) !important;
+    color: var(--pure-white) !important;
+    border: 2px solid var(--pure-white);
+}
+
+.buttons .contactme:hover {
+    background-color: var(--pure-white) !important;
+    color: var(--dark-purple) !important;
 }
 
 /* Override any inline teal styles */
@@ -193,6 +228,12 @@
 /* Additional color overrides */
 .color\:\#685369, .color\:\#685369-text {
     color: var(--main-purple) !important;
+}
+
+/* White text overrides */
+.white-text.teal {
+    background-color: var(--dark-purple) !important;
+    color: var(--pure-white) !important;
 }
 </style>
 
