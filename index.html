@@ -314,6 +314,84 @@ h5[style*="color:#004d40"] {
     background-color: var(--dark-purple) !important;
     color: var(--pure-white) !important;
 }
+
+    /* Update table of contents link styles */
+.side-nav.fixed .table-of-contents a {
+    border-left: 2px solid transparent; /* Start with transparent border */
+}
+
+/* Override the border for the logo container to ensure no highlight appears */
+.side-nav.fixed .logo #logo-container {
+    border-left: none !important;
+}
+
+/* Style active navigation items except for logo */
+.side-nav.fixed .table-of-contents a.active:not(#logo-container) {
+    border-left: 2px solid var(--dark-purple);
+}
+
+/* Remove any hover effects from the logo container */
+.side-nav.fixed .logo #logo-container:hover {
+    border-left: none !important;
+}
+
+/* Ensure the logo container doesn't get the active class styling */
+.side-nav.fixed .logo.active #logo-container {
+    border-left: none !important;
+}
+
+/* Add padding to navigation items to maintain alignment */
+.side-nav.fixed li:not(.logo) a {
+    padding-left: 28px;
+}
+
+    /* Style the hamburger menu icon */
+.button-collapse i.mdi-navigation-menu {
+    color: var(--dark-purple) !important;
+}
+
+/* Also style the mobile nav trigger for consistency */
+nav.trigger i {
+    color: var(--dark-purple) !important;
+}
+
+/* Ensure the icon color stays consistent when active/hovered */
+.button-collapse:hover i.mdi-navigation-menu,
+.button-collapse:active i.mdi-navigation-menu,
+.button-collapse:focus i.mdi-navigation-menu {
+    color: var(--dark-purple) !important;
+}
+
+    /* Convert all brown text to dark purple */
+.brown-text {
+    color: var(--dark-purple) !important;
+}
+
+.brown-text.text-darken-2 {
+    color: var(--dark-purple) !important;
+}
+
+.brown-text.text-darken-3 {
+    color: var(--dark-purple) !important;
+}
+
+.brown-text.light {
+    color: var(--dark-purple) !important;
+}
+
+.card-title.brown-text {
+    color: var(--dark-purple) !important;
+}
+
+/* In case there are any brown backgrounds */
+.brown {
+    background-color: var(--dark-purple) !important;
+}
+
+/* For any other brown variants */
+[class*="brown-text"] {
+    color: var(--dark-purple) !important;
+}
   </style>
 
 </head>
