@@ -1241,6 +1241,8 @@ I'm an experienced technologist with over a decade of expertise in technical sup
 /* Add this style section to your existing CSS */
 .skills-grid {
   margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .skill-item {
@@ -1249,6 +1251,7 @@ I'm an experienced technologist with over a decade of expertise in technical sup
   align-items: center;
   padding: 10px;
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .skill-item img {
@@ -1284,7 +1287,28 @@ I'm an experienced technologist with over a decade of expertise in technical sup
   margin-bottom: 0;
 }
 
+/* Fix skills grid alignment */
+.skills-grid .col.s6.m3 {
+  width: 25%;
+  float: left;
+}
+
+.skills-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.skills-grid .col {
+  padding: 0 0.75rem;
+}
+
 @media only screen and (max-width: 600px) {
+  .skills-grid .col.s6.m3 {
+    width: 50%;
+  }
+  
   .skill-item {
     margin-bottom: 10px;
     padding: 5px;
@@ -1301,7 +1325,6 @@ I'm an experienced technologist with over a decade of expertise in technical sup
     max-width: 130px;
   }
 }
-
 </style>
 
     <!-- Seventh Section: Education -->
