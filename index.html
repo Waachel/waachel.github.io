@@ -1301,6 +1301,29 @@ I'm an experienced technologist with over a decade of expertise in technical sup
     max-width: 130px;
   }
 }
+  /* Fix skills grid alignment */
+.skills-grid .col.s6.m3 {
+    width: 25% !important;
+    clear: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .skills-grid .col.s6.m3 {
+        width: 50% !important;
+    }
+}
+
+/* Ensure each row contains exactly 4 items */
+.skills-grid .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Force items to align properly */
+.skills-grid .col {
+    float: none !important;
+    display: flex;
+}
 </style>
 
     <!-- Seventh Section: Education -->
