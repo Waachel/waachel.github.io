@@ -1552,15 +1552,57 @@ I'm an experienced technologist with over a decade of expertise in technical sup
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
   <script>
     // Materialize - Initializers
-    $(document).ready(function () {
-      $(".scrollspy").scrollSpy()
-      // Initialize collapse button
-      $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
-    })
+// Initialize Materialize components
+$(document).ready(function() {
+  $(".scrollspy").scrollSpy();
+  
+  // Initialize collapse button
+  $(".button-collapse").sideNav({
+    menuWidth: 190,
+    edge: "left",
+    closeOnClick: true
+  });
+
+  // Handle card reveal behavior
+  $('.card').each(function() {
+    const $card = $(this);
+    const $cardReveal = $card.find('.card-reveal');
+    
+    // Original activator click behavior
+    $card.find('.activator').on('click', function(e) {
+      e.stopPropagation();
+      $cardReveal.css('display', 'block')
+        .css('transform', 'translateY(-100%)');
+    });
+    
+    // Close on X button click
+    $card.find('.card-reveal .card-title').on('click', function(e) {
+      e.stopPropagation();
+      $cardReveal.css('transform', 'translateY(0)');
+      setTimeout(() => {
+        $cardReveal.css('display', 'none');
+      }, 200); // Match the transition duration
+    });
+  });
+
+  // Close any open card reveals when clicking outside
+  $(document).on('click', function(e) {
+    const $target = $(e.target);
+    
+    // If click is not within a card-reveal or its activator
+    if (!$target.closest('.card-reveal').length && !$target.closest('.activator').length) {
+      $('.card-reveal').each(function() {
+        const $cardReveal = $(this);
+        if ($cardReveal.css('display') === 'block') {
+          $cardReveal.css('transform', 'translateY(0)');
+          setTimeout(() => {
+            $cardReveal.css('display', 'none');
+          }, 200);
+        }
+      });
+    }
+  });
+});
   </script>
 </body>
 
