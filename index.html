@@ -1564,19 +1564,30 @@ $(document).ready(function() {
   });
 
   // Handle card reveal behavior
-  $('.card').each(function() {
+    $('.card').each(function() {
     const $card = $(this);
     const $cardReveal = $card.find('.card-reveal');
     
     // Original activator click behavior
     $card.find('.activator').on('click', function(e) {
       e.stopPropagation();
-
-    // Reset scroll position before showing
+      
+      // First display the card reveal
+      $cardReveal.css({
+        'display': 'block',
+        'transform': 'translateY(0)'
+      });
+      
+      // Force a browser reflow
+      $cardReveal[0].offsetHeight;
+      
+      // Reset scroll position
       $cardReveal.scrollTop(0);
       
-      $cardReveal.css('display', 'block')
-        .css('transform', 'translateY(-100%)');
+      // Then animate it up
+      requestAnimationFrame(() => {
+        $cardReveal.css('transform', 'translateY(-100%)');
+      });
     });
     
     // Close on X button click
