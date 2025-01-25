@@ -1599,6 +1599,14 @@ $(document).ready(function() {
   });
 });
   </script>
+
+  <script src="/assets/js/carousel.js"></script>
+<script>
+  const carouselRoot = document.getElementById('carousel-root');
+  if (carouselRoot) {
+    ReactDOM.render(React.createElement(ProjectCarousel), carouselRoot);
+  }
+</script>
 <script>
   // Mount React carousel component
   const carouselRoot = document.getElementById('carousel-root');
