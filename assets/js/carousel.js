@@ -11,7 +11,7 @@ const ProjectCarousel = {
     },
     {
       title: "Omega Race",
-      image: "/assets/img/OmegaRace.png"
+      image: "/assets/img/OmegaRace2.png"
     }
   ],
   
