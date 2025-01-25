@@ -2,7 +2,7 @@ const ProjectCarousel = {
   currentSlide: 0,
   projects: [
     {
-      title: "Game Engine Development",
+      title: "Hybrid Game Engine",
       image: "/assets/img/Game Engine.png"
     },
     {
@@ -10,8 +10,8 @@ const ProjectCarousel = {
       image: "/assets/img/ClearFactory.png"
     },
     {
-      title: "Real-time Audio Engine",
-      image: "/assets/img/AudioEngine.png"
+      title: "Omega Race",
+      image: "/assets/img/OmegaRace.png"
     }
   ],
   
