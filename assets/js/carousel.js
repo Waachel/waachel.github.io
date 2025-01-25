@@ -2,7 +2,7 @@ const ProjectCarousel = {
   currentSlide: 0,
   projects: [
     {
-      title: "Enterprise File Processing Pipeline",
+      title: "File Processing Pipeline",
       image: "/assets/img/FileProcessing.png",
       id: "file-processing-project"
     },
