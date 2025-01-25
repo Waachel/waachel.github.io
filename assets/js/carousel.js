@@ -28,7 +28,6 @@ const ProjectCarousel = {
         <img src="${this.projects[this.currentSlide].image}" alt="${this.projects[this.currentSlide].title}">
         <div class="carousel-caption">
           <h3>${this.projects[this.currentSlide].title}</h3>
-          <p>${this.projects[this.currentSlide].description}</p>
         </div>
         <button class="prev" onclick="ProjectCarousel.prevSlide()">&lt;</button>
         <button class="next" onclick="ProjectCarousel.nextSlide()">&gt;</button>
