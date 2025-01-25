@@ -7,7 +7,7 @@ const ProjectCarousel = {
     },
     {
       title: "C.L.E.A.R. F.A.C.T.O.R.Y.", 
-      image: "/assets/img/ClearFactory.png"
+      image: "assets/img/ClearFactoryBackground.png"
     },
     {
       title: "Omega Race",
