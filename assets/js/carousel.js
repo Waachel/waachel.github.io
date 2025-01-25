@@ -1,3 +1,4 @@
+// Update /assets/js/carousel.js to:
 const ProjectCarousel = {
   currentSlide: 0,
   projects: [
@@ -20,24 +21,11 @@ const ProjectCarousel = {
     setInterval(() => this.nextSlide(), 5000);
   },
 
-  getVisibleSlides() {
-    const prevIndex = (this.currentSlide - 1 + this.projects.length) % this.projects.length;
-    const nextIndex = (this.currentSlide + 1) % this.projects.length;
-    return [
-      this.projects[prevIndex],
-      this.projects[this.currentSlide],
-      this.projects[nextIndex]
-    ];
-  },
-
   render() {
     const root = document.getElementById('carousel-root');
-    const visibleSlides = this.getVisibleSlides();
     root.innerHTML = `
       <div class="carousel">
-        ${visibleSlides.map(project => `
-          <img src="${project.image}" alt="${project.title}">
-        `).join('')}
+        <img src="${this.projects[this.currentSlide].image}" alt="${this.projects[this.currentSlide].title}">
         <div class="carousel-caption">
           <h3>${this.projects[this.currentSlide].title}</h3>
         </div>
@@ -58,5 +46,8 @@ const ProjectCarousel = {
   }
 };
 
+// Initialize carousel
 document.addEventListener('DOMContentLoaded', () => ProjectCarousel.init());
+
+// At the end of /assets/js/carousel.js:
 console.log('Carousel script loaded');
