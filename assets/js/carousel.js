@@ -4,17 +4,14 @@ const ProjectCarousel = {
   projects: [
     {
       title: "Game Engine Development",
-      description: "Custom graphics and physics engine with DirectX and OpenGL",
       image: "/assets/img/Game Engine.png"
     },
     {
       title: "C.L.E.A.R. F.A.C.T.O.R.Y.", 
-      description: "First-person recycling simulation game built in Unity",
       image: "/assets/img/ClearFactory.png"
     },
     {
       title: "Real-time Audio Engine",
-      description: "Advanced multithreaded audio system with XAudio2",
       image: "/assets/img/AudioEngine.png"
     }
   ],
