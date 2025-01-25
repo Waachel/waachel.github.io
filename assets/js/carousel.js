@@ -52,3 +52,6 @@ const ProjectCarousel = {
 
 // Initialize carousel
 document.addEventListener('DOMContentLoaded', () => ProjectCarousel.init());
+
+// At the end of /assets/js/carousel.js:
+console.log('Carousel script loaded');
