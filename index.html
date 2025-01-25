@@ -487,13 +487,20 @@ blockquote h2 {
     
 .carousel-caption {
   position: absolute;
-  bottom: 50px;
+  bottom: 0;
   left: 0;
   right: 0;
   background: var(--dark-purple);
   color: white;
-    text-align: center;
+  text-align: center;
   vertical-align: top;
+}
+
+/* Adjust caption position for smaller screens */
+@media screen and (max-width: 768px) {
+  .carousel-caption {
+    bottom: 50px;
+  }
 }
 
 .carousel-caption h3 {
