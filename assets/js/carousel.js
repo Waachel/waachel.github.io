@@ -1,4 +1,3 @@
-// Update /assets/js/carousel.js to:
 const ProjectCarousel = {
   currentSlide: 0,
   projects: [
@@ -25,9 +24,11 @@ const ProjectCarousel = {
     const root = document.getElementById('carousel-root');
     root.innerHTML = `
       <div class="carousel">
-        <img src="${this.projects[this.currentSlide].image}" alt="${this.projects[this.currentSlide].title}">
-        <div class="carousel-caption">
-          <h3>${this.projects[this.currentSlide].title}</h3>
+        <div class="carousel-image-container">
+          <img src="${this.projects[this.currentSlide].image}" alt="${this.projects[this.currentSlide].title}">
+          <div class="carousel-caption">
+            <h3>${this.projects[this.currentSlide].title}</h3>
+          </div>
         </div>
         <button class="prev" onclick="ProjectCarousel.prevSlide()">&lt;</button>
         <button class="next" onclick="ProjectCarousel.nextSlide()">&gt;</button>
@@ -46,8 +47,5 @@ const ProjectCarousel = {
   }
 };
 
-// Initialize carousel
 document.addEventListener('DOMContentLoaded', () => ProjectCarousel.init());
-
-// At the end of /assets/js/carousel.js:
 console.log('Carousel script loaded');
