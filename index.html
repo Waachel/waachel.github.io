@@ -420,12 +420,14 @@ blockquote h2 {
   width: 90%;
   max-width: 600px;
   margin: 2rem auto 0;
-  height: 300px;
+  height: 400px;
   background: var(--dark-purple);
   border-radius: 8px;
   overflow: visible;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   z-index: 2;
+  display: flex;
+  flex-direction: column;
 }
 
 .carousel img {
@@ -466,34 +468,36 @@ blockquote h2 {
 
 /* Ensure the image container itself maintains hidden overflow */
 .carousel-image-container {
-  width: 100%;
-  height: 100%;
+  flex: 1;
+  min-height: 0;
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   background-color: transparent;
 }
 
     .carousel-image-container img {
   padding: 15px;
   width: 80%;
-  height: 80%;
+  height: auto;
+  max-height: calc(100% - 30px);
   object-fit: contain;
-  background: var(--dark-purple);
   display: block;
   margin: auto;
 }
 
     
 .carousel-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+position: relative; /* Changed from absolute to relative */
   background: var(--dark-purple);
   color: white;
   text-align: center;
-  vertical-align: top;
+  padding: 10px;
+  min-height: 60px; /* Minimum height for caption */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 8px 8px;
 }
 
 .carousel-caption h3 {
@@ -502,9 +506,42 @@ blockquote h2 {
   color: white;
   background-color: transparent;
   text-align: center;
-  vertical-align: top;
+  padding: 0 10px;
 }
 
+    /* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .carousel {
+    height: 350px;
+    width: 95%;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1.5rem;
+  }
+  
+  .carousel button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel {
+    height: 300px;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1.2rem;
+  }
+  
+  .carousel button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
   </style>
   
 </head>
