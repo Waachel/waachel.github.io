@@ -24,9 +24,6 @@
   <!-- Custom Styles-->
   <link rel="stylesheet" href="/assets/css/style.css" />
   <title>Rachel Micolichek | Game Developer</title>
-
-  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
   
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
@@ -163,6 +160,18 @@
 
 #intro h5 {
     color: var(--dark-purple) !important;
+}
+
+    #carousel.section.scrollspy {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+    padding: 2rem 0;
+    margin-top: -2rem;
+}
+
+#intro.section.scrollspy.full-height {
+    z-index: 1;
 }
 
 /* Profile picture and header */
@@ -404,6 +413,103 @@ nav.trigger i {
 blockquote h2 {
     color: var(--accent-purple) !important;
 }
+
+/* Update the carousel button positioning */
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto 0;
+  height: 300px;
+  background: var(--dark-purple);
+  border-radius: 8px;
+  overflow: visible;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--dark-purple);
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 30px;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.carousel button:hover {
+  background: var(--accent-purple);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel .prev {
+  left: -30px; /* Position outside the carousel */
+}
+
+.carousel .next {
+  right: -30px; /* Position outside the carousel */
+}
+
+/* Ensure the image container itself maintains hidden overflow */
+.carousel-image-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+    .carousel-image-container img {
+  padding: 15px;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  background: var(--dark-purple);
+  display: block;
+  margin: auto;
+}
+
+    
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--dark-purple);
+  color: white;
+  text-align: center;
+  vertical-align: top;
+}
+
+/* Adjust caption position for smaller screens */
+@media screen and (max-width: 768px) {
+  .carousel-caption {
+    bottom: 50px;
+  }
+}
+
+.carousel-caption h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+  background-color: transparent;
+}
+
   </style>
   
 </head>
@@ -568,14 +674,15 @@ blockquote h2 {
               <a href="#about" class="readme">Read More</a>
               <a href="#contact" class="contactme">Contact Me</a>
             </div>
+            <div id="carousel" class="section scrollspy">
+            <div id="carousel-root"></div>
+              </div>
           </div>
         </div>
       </div>      
     </section>
 
-<section id="carousel" class="section scrollspy">
-      <div id="carousel-root"></div>
-    </section>
+
     
     <!-- Second Section: About -->
     <section id="about" class="section scrollspy">
@@ -591,7 +698,7 @@ I'm an experienced technologist with over a decade of expertise in technical sup
         </p>
         <p>
           <ul>
-            <li><b>Languages:</b> C, C++, Python, HTML/CSS, Java, JavaScript, Markdown</li>
+            <li><b>Languages:</b> C/C++, C#, Python, HTML/CSS, Java, JavaScript, Markdown</li>
             <li><b>Databases & Cloud:</b> SQL, SSMS, AWS</li>
             <li><b>Version Control:</b> Git, Perforce, Unity Version Control</li>
             <li><b>Game Development:</b> Custom Game Engine Development, Unity, Blender, DirectX, OpenGL</li>
@@ -1203,6 +1310,12 @@ style="height: 100%; width: 100%" class="activator" />
               <div class="skill-name">C++</div>
             </div>
           </div>
+           <div class="col s6 m3">
+            <div class="skill-item">
+              <img alt="C#" src="assets/img/CSharp.png" class="responsive-img" />
+              <div class="skill-name">C#</div>
+            </div>
+          </div>
           <div class="col s6 m3">
             <div class="skill-item">
               <img alt="Python" src="/assets/img/python-logo-1.png" class="responsive-img" />
@@ -1599,13 +1712,9 @@ $(document).ready(function() {
   });
 });
   </script>
-<script>
-  // Mount React carousel component
-  const carouselRoot = document.getElementById('carousel-root');
-  if (carouselRoot) {
-    ReactDOM.render(React.createElement(ProjectCarousel), carouselRoot);
-  }
-</script>
+
+<script src="https://waachel.github.io/assets/js/carousel.js"></script>
+
   
 </body>
 
