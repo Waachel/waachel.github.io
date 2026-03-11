@@ -8,7 +8,7 @@ const ProjectCarousel = {
     },
     {
       title: "C.L.E.A.R. F.A.C.T.O.R.Y.",
-      image: "/assets/img/ClearFactoryBackground.png",
+      image: "/assets/img/CLEARFACTORYLANDFILL.png",
       id: "clear-factory-project"
     },
     {
