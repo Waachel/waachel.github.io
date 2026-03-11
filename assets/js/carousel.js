@@ -2,9 +2,9 @@ const ProjectCarousel = {
   currentSlide: 0,
   projects: [
     {
-      title: "File Processing Pipeline",
-      image: "/assets/img/FileProcessing.png",
-      id: "file-processing-project"
+      title: "Breached",
+      image: "/assets/img/Breached_maze.png",
+      id: "breached-project"
     },
     {
       title: "C.L.E.A.R. F.A.C.T.O.R.Y.",
@@ -22,11 +22,6 @@ const ProjectCarousel = {
       id: "game-engine-project"
     },
     {
-      title: "Model & Animation Pipeline",
-      image: "/assets/img/ModelandAnimation.png",
-      id: "model-animation-project"
-    },
-    {
       title: "Custom Graphics Engine",
       image: "/assets/img/GraphicsEngine.png",
       id: "graphics-engine-project"
@@ -35,6 +30,11 @@ const ProjectCarousel = {
       title: "Real-time Audio Engine",
       image: "/assets/img/AudioEngine.png",
       id: "audio-engine-project"
+    },
+        {
+      title: "Model & Animation Pipeline",
+      image: "/assets/img/ModelandAnimation.png",
+      id: "model-animation-project"
     },
     {
       title: "Dots and Boxes Game",
