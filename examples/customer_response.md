@@ -43,4 +43,5 @@ const payload: CreateRequestPayload = {
 Since formatting can be lost in email, I've attached a modified copy of the integration code with these changes applied. Once deployed, all three fields should come through consistently. Please let me know if you run into any issues or have questions.
 
 Thanks,
+
 Rachel
